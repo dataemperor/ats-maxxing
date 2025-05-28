@@ -17,7 +17,7 @@ def ats_scanner(input_string):
     tokens = lowercase_input_string.split()
 
     current_path = Path(__file__)
-    keyword_csv_path = current_path.parent.parent / 'data' / \
+    keyword_csv_path = current_path.resolve().parent.parent / 'data' / \
         'processed' / 'common-keywords-processed.csv'
 
     df = pd.read_csv(keyword_csv_path)
